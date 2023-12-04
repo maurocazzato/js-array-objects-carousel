@@ -27,7 +27,7 @@
 // const texts = imageArray.map(item => item.text);
 
 const imageArray = [ 
-    { image: 'img/01.webp', title: 'Marvel\'s Spiderman Miles Morale', text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.', },
+    { image: 'img/01.webp', title: 'Marvel\'s Spiderman Miles Morales', text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.', },
 
     { image: 'img/02.webp', title: 'Ratchet & Clank: Rift Apart', text: 'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.', },
 
@@ -42,10 +42,11 @@ let itemContent = '';
 // creo div con immagini, titolo e testo allegate
 for (const item of imageArray) {
     itemContent += `
-        <div class="item">
-            <img src="${item.image}" alt="${item.title}">
-            <h2>${item.title}</h2>
-            <p>${item.text}</p>
+        <div class="item" style="background-image: url(${item.image})">
+            <div class="item-content">
+                <h2>${item.title}</h2>
+                <p>${item.text}</p>
+            </div>
         </div>
     `;
 }
