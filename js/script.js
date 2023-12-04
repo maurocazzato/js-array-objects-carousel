@@ -42,7 +42,8 @@ let itemContent = '';
 // creo div con immagini, titolo e testo allegate
 for (const item of imageArray) {
     itemContent += `
-        <div class="item" style="background-image: url(${item.image})">
+        <div class="item">
+            <img src="${item.image}" alt="${item.title}">
             <div class="item-content">
                 <h2>${item.title}</h2>
                 <p>${item.text}</p>
